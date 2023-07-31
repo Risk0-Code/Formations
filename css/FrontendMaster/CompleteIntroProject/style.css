@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Open Sans',sans-serif;
+  background-color: #efefef;
+  color: rgb(36, 36, 36);
+}
+a{
+  text-decoration: none;
+  color: rgb(36, 36, 36);
+}
+input{
+  background-color: white;
+  border: none;
+}
+input:focus{
+  outline:none;
+}
+button{
+  border: none;
+  background-color: white;
+}
+
+/* Header */
+
+.header-index{
+  background-color: #43291c;
+  display: flex;
+  justify-content: center;
+}
+.header-index h1{
+  color: #fcf2bf;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 20px;
+}
+.header-index img{
+  position: relative;
+  top: 6px;
+}
+
+/* Main */
+
+.main-index {
+  padding: 30px;
+}
+
+.main-index .cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1.5fr;
+  grid-template-areas: "items""items";
+  column-gap: 30px;
+  row-gap: 20px;
+}
+.main-index .cards section{
+  background-color: #eee2d6;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
+  padding: 15px;
+}
+.main-index .cards section h2{
+  color: #895a2e;
+  font-weight:normal;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 14px 0;
+}
+.main-index .cards .items {
+  grid-area: items;
+}
+
+
+.items-list > li{
+  padding: 16px 0;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+}
+.items-list > li > span:first-of-type{
+  font-weight: normal;
+}
+.items-list > li:not(:last-child) {
+  border-bottom: 2px solid #deb893;
+}
+
+
+.sub-item-list{
+  color: #bd9a7e;
+  font-weight: lighter;
+  font-size: 14px;
+  grid-column: 2;
+  padding: 2px 0;
+}
+.sub-item-list li{
+  padding-top: 6px;
+}
+
+
+.input{
+  position: relative;
+  margin-bottom: 20px;
+}
+.input label{
+  position: absolute;
+  color: #895a2e;
+  background-color: #eee2d6;
+  font-size: 12px;
+  padding: 0 4px;
+  top: -9px;
+  left: 26px;
+}
+.input input{
+  display: block;
+  background-color:#eee2d6;
+  border: 2px solid#895a2e;
+  border-radius: 30px;
+  width: 100%;
+  padding: 14px 30px;
+}
+
+.checkout table{
+  margin: 30px auto;
+  font-size: 16px;
+}
+
+.checkout table tbody tr{
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+  max-width: 600px;
+  min-width: 150px;
+  margin: 30px 0;
+}
+.checkout table tbody tr:last-child{
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.checkout-button{
+  width: 100%;
+  background-color: #dfb994;
+  border-radius: 50px;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  transition: background .1s linear;
+}
+
+.checkout-button:hover{
+  cursor: pointer;
+  background-color: #bd9a7e;
+  transition: background .1s linear;
+}

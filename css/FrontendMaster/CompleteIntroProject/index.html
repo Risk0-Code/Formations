@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Coffee Master</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header class="header-index">
+			<nav>
+				<a href="/">
+					<h1>
+						<img
+							src="coffee_masters_logo.png"
+							alt="Coffee Master Logo"
+							height="25px"
+						/>
+						Coffee Masters
+					</h1>
+				</a>
+			</nav>
+		</header>
+		<main class="main-index">
+			<div class="cards">
+				<section class="items">
+					<h2>Items</h2>
+					<ul type="none" class="items-list">
+						<li>
+							<span>1x </span>Cappucino<span> $6.90</span>
+							<ul class="sub-item-list" type="none">
+								<li>Light Foam</li>
+							</ul>
+						</li>
+						<li>
+							<span>1x </span>Cappucino<span> $7.90</span>
+							<ul type="none" class="sub-item-list">
+								<li>Almond Milk</li>
+								<li>Double Espresso Shot</li>
+							</ul>
+						</li>
+						<li>
+							<span>1x </span>Croissant<span> $5.37</span>
+							<ul type="none" class="sub-item-list">
+								<li>Butter</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="name">
+					<h2>Name</h2>
+					<form action="#" id="checkout" method="post">
+						<div class="input">
+							<label for="name">Name for Order</label>
+							<input type="text" name="name" id="name" required />
+						</div>
+					</form>
+				</section>
+				<section class="payment">
+					<h2>Payment</h2>
+					<div class="input">
+						<label for="ccn">Card Number</label>
+						<input
+							type="tel"
+							id="ccn"
+							name="ccn"
+							form="checkout"
+							inputmode="numeric"
+							pattern="[0-9\s]{13,19}"
+							autocomplete="cc-number"
+							maxlength="19"
+							placeholder="XXXX XXXX XXXX XXXX"
+							required
+						/>
+					</div>
+					<div class="input">
+						<label for="ccv">CCV Number</label>
+						<input
+							type="tel"
+							name="ccv"
+							id="ccv"
+							form="checkout"
+							inputmode="numeric"
+							pattern="[0-9]{3}"
+							autocomplete="cc-csc"
+							maxlength="3"
+							placeholder="XXX"
+						/>
+					</div>
+				</section>
+			</div>
+			<div class="checkout">
+				<table>
+					<tbody>
+						<tr>
+							<td>Subtotal:</td>
+							<td>$19.27</td>
+						</tr>
+						<tr>
+							<td>Tax:</td>
+							<td>$0.96</td>
+						</tr>
+						<tr>
+							<td>Total:</td>
+							<td>$20.23</td>
+						</tr>
+					</tbody>
+				</table>
+				<button form="checkout" type="submit" class="checkout-button">
+					Place Order
+				</button>
+			</div>
+		</main>
+	</body>
+</html>

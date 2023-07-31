@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Forms</title>
+	</head>
+	<body>
+		<div>
+			<form style="padding-top: 12px; padding-bottom: 12px" action="">
+				<label for="mail">
+					I would like you to provide me with an email address:
+				</label>
+				<input type="email" id="mail" name="mail" />
+				<button>Submit</button>
+			</form>
+			<script>
+				const email = document.getElementById("mail");
+
+				email.addEventListener("input", (event) =>
+					email.validity.typeMismatch
+						? email.setCustomValidity("I am expecting an email address!")
+						: email.setCustomValidity("")
+				);
+			</script>
+		</div>
+
+		<hr />
+		<div style="padding-top: 12px; padding-bottom: 12px">
+			<form action="https://example.com/animals">
+				<label method="POST" for="animal">What is your favorite animal?</label>
+				<input type="text" id="animal" name="animal" />
+				<div>
+					<label for="color">Color</label>
+					<select name="color" id="color">
+						<option value="orange">Orange</option>
+						<option selected value="pink">Pink</option>
+					</select>
+				</div>
+				<button>Save</button>
+			</form>
+
+			<fieldset>
+				<legend>What is your favorite web technology</legend>
+				<label for="html">HTML</label>
+				<input type="radio" name="webfeature" id="html" value="html" />
+				<label for="css">CSS</label>
+				<input type="radio" name="webfeature" id="css" value="css" />
+			</fieldset>
+		</div>
+
+		<hr />
+
+		<div style="padding-top: 12px; padding-bottom: 12px">
+			<form action="">
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name" required />
+				<label for="password">Password (required)</label>
+				<input
+					required
+					type="password"
+					name="password"
+					id="password"
+					minlength="8"
+					aria-describedby="password-minlength"
+				/>
+				<div id="password-minlength">Enter at least eight characters</div>
+				<button>Submit</button>
+			</form>
+
+			<form action="">
+				<label for="animal">What is your favorite animal? (required)</label>
+
+				<!-- only accept lowercase letters and at least 2 characters with a maximum of 20 -->
+				<input
+					type="text"
+					name="animal"
+					id="animal"
+					required
+					pattern="[a-z]{2-20}"
+				/>
+				<button>Submit</button>
+			</form>
+		</div>
+	</body>
+</html>
