@@ -254,9 +254,6 @@
 			const [, , , , breed] = url.split("/");
 			return breed.split("-").reverse().join(" ");
 		}
-		console.log(
-			getBreedFromURL("https://images.dog.ceo/breeds/poodle/n02113799_2280.jpg")
-		);
 
 		// TODO 3
 		// Given a URL, fetch the resource at that URL,
@@ -290,6 +287,14 @@
 			// Create a button element whose name, value, and textContent properties are the value of that choice,
 			// attach a "click" event listener with the buttonHandler function,
 			// and append the button as a child of the options element
+			choicesArray.forEach((choice) => {
+				const button = document.createElement("button");
+				button.value = choice;
+				button.name = choice;
+				button.textContent = choice;
+				button.addEventListener("click", buttonHandler);
+				options.appendChild(button);
+			});
 		}
 
 		// Function to add the quiz content to the page
