@@ -323,6 +323,8 @@
 
 		// TODO 5
 		// Asynchronously call the loadQuizData() function,
+		const [doggoImgUrl, correctBreed, breedChoices] = await loadQuizData();
 		// Then call renderQuiz() with the returned imageUrl, correctAnswer, and choices
+		renderQuiz(doggoImgUrl, correctBreed, breedChoices);
 	</script>
 </html>
