@@ -1,0 +1,3 @@
+First file using vim as editor
+Maybe some day I'll be able to use it for development? 
+What do you think? 
